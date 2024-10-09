@@ -18,7 +18,6 @@ yt-dlp==2023.6.22
 motor
 aiohttp
 aiofiles
-pytz
 ffmpeg
 umongo==3.1.0
 speedtest-cli
@@ -27,3 +26,5 @@ gunicorn==20.1.0
 Jinja2==3.0.3
 werkzeug==2.0.2
 itsdangerous==2.0.1
+shortzy
+pytz
