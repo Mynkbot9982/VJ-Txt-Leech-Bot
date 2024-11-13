@@ -80,22 +80,28 @@ async def upload(bot: Client, m: Message):
     await input1.delete(True)
     
 
+    await editable.edit("**Now Please Send Me Extracted By :**")
+    input1: Message = await bot.listen(editable.chat.id)
+    raw_text0 = input2.text
+    await input2.delete(True)
+    
+    
     await editable.edit("**𝔼ɴᴛᴇʀ ʀᴇ𝕤ᴏʟᴜᴛɪᴏɴ📸**\n144,240,360,480,720,1080 please choose quality")
     input2: Message = await bot.listen(editable.chat.id)
-    raw_text2 = input2.text
-    await input2.delete(True)
+    raw_text0 = input3.text
+    await input3.delete(True)
     try:
-        if raw_text2 == "144":
+        if raw_text3 == "144":
             res = "256x144"
-        elif raw_text2 == "240":
+        elif raw_text3 == "240":
             res = "426x240"
-        elif raw_text2 == "360":
+        elif raw_text3 == "360":
             res = "640x360"
-        elif raw_text2 == "480":
+        elif raw_text3 == "480":
             res = "854x480"
-        elif raw_text2 == "720":
+        elif raw_text3 == "720":
             res = "1280x720"
-        elif raw_text2 == "1080":
+        elif raw_text3 == "1080":
             res = "1920x1080" 
         else: 
             res = "UN"
@@ -106,21 +112,21 @@ async def upload(bot: Client, m: Message):
 
     await editable.edit("Now Enter A Caption to add caption on your uploaded file")
     input3: Message = await bot.listen(editable.chat.id)
-    raw_text3 = input3.text
-    await input3.delete(True)
+    raw_text0 = input4.text
+    await input4.delete(True)
     highlighter  = f"️ ⁪⁬⁮⁮⁮"
-    if raw_text3 == 'Robin':
+    if raw_text4 == 'Robin':
         MR = highlighter 
     else:
-        MR = raw_text3
+        MR = raw_text4
    
     await editable.edit("Now send the Thumb url/nEg » https://graph.org/file/ce1723991756e48c35aa1.jpg \n Or if don't want thumbnail send = no")
-    input6 = message = await bot.listen(editable.chat.id)
-    raw_text6 = input6.text
-    await input6.delete(True)
+    input5 = message = await bot.listen(editable.chat.id)
+    raw_text0 = input5.text
+    await input5.delete(True)
     await editable.delete()
 
-    thumb = input6.text
+    thumb = input5.text
     if thumb.startswith("http://") or thumb.startswith("https://"):
         getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
         thumb = "thumb.jpg"
@@ -193,7 +199,7 @@ async def upload(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**⥥ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶⬇️⬇️... »**\n\n**📝Name »** `{name}\n❄Quality » {raw_text2}`\n\n**🔗URL »** `{url}`"
+                    Show = f"**⥥ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶⬇️⬇️... »**\n\n**📝Name »** `{name}\n⚡Quality » {raw_text2}`\n\n**🔗URL »** `{url}`"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -210,7 +216,7 @@ async def upload(bot: Client, m: Message):
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("**𝔻ᴏɴᴇ 𝔹ᴏ𝕤𝕤😎**")
+    await m.reply_text("**🔰🔰 Sᴜᴄᴄᴇsғᴜʟʟʏ Dᴏᴡɴʟᴏᴀᴅᴇᴅ Aʟʟ Lᴇᴄᴛᴜʀᴇs...! 🔰! 🔰**")
 
 
 bot.run()
